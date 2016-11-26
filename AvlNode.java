@@ -45,7 +45,7 @@ class AvlNode {
   }
 
   /**
-   *
+   * Insert a node into an AVL tree
    * @param root root of the current tree
    * @param val the value to be inserted
    * @return the inserted node
@@ -70,7 +70,6 @@ class AvlNode {
     } else {
       newRoot = root;
     }
-
     return newRoot;
   }
 
@@ -144,6 +143,9 @@ class AvlNode {
     return true;
   }
 
+  /**
+   * Recalculates the current node's height
+   */
   public void recalcHeight() {
     int leftHeight = this.left == null ? NULL_NODE_HEIGHT : this.left.ht;
     int rightHeight = this.right == null ? NULL_NODE_HEIGHT : this.right.ht;
@@ -261,6 +263,10 @@ class AvlNode {
     return rightNode;
   }
 
+  /**
+   * Returns the height of the left subtree
+   * @return an int of the height. -1 for null.
+   */
   public int getLeftHeight() {
     if (this.left == null) {
       return NULL_NODE_HEIGHT;
@@ -269,6 +275,10 @@ class AvlNode {
     }
   }
 
+  /**
+   * Returns the height of the right subtree
+   * @return an int of the height. -1 for null.
+   */
   public int getRightHeight() {
     if (this.right == null) {
       return NULL_NODE_HEIGHT;
